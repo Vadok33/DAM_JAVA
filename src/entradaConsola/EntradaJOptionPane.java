@@ -6,10 +6,18 @@ public class EntradaJOptionPane {
 
 	public static void main(String[] args) {
 		
-		String name = JOptionPane.showInputDialog("Por favor, introduce tu nombre");
+		// I/O
 		
-		JOptionPane.showMessageDialog(null, "Buenos días " + name + " eres muy puta");
-			
+		String nombretxt = JOptionPane.showInputDialog("Por favor, introduce tu nombre");
+		
+		String edadtxt = JOptionPane.showInputDialog("Por favor, introduce tu edad");
+		
+		int edadint = Integer.parseInt(edadtxt);
+
+		
+		JOptionPane.showMessageDialog(null, "Te llamas " + nombretxt);
+		
+		JOptionPane.showMessageDialog(null, "El año que viene tendrás " + (edadint + 1) + " años");
 	}
 
 }

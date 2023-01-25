@@ -1,38 +1,33 @@
 package condicional;
 
-import java.util.Scanner;
-
 public class Condicional {
 
 	public static void main(String[] args) {
 		
-		Scanner entrada = new Scanner(System.in);
-				
-				System.out.println("Por favor introduce un número");
+		int numDia=5;
+		String nombreDia;
 		
-		int num1 = entrada.nextInt();
-				
-			System.out.println("Por favor introduce otro numero");
+		switch (numDia) {
+		case 1: nombreDia = "Hoy es Lunes";
+		break;
+		case 2: nombreDia = "Hoy es Martes";
+		break;
+		case 3: nombreDia = "Hoy es Miercoles";
+		break;
+		case 4: nombreDia = "Hoy es Jueves";
+		break;
+		case 5: nombreDia = "Hoy es Viernes";
+		break;
+		case 6: nombreDia = "Hoy es Sabado";
+		break;
+		case 7: nombreDia = "Hoy es Domingo";
+		break;
+		default: nombreDia= "Numero de día incorrecto";
+		break;
 		
-		int num2 = entrada.nextInt();
-		 
-		//int num1 = 5;
-		//int num2 = 10;
-
-		if (num2 > num1){
-
-			System.out.println("El primer numero es menor");
 		}
+		System.out.println(nombreDia);
+		
+	}
 
-		else {
-	   		 if (num2 == num1) {
-	   			 System.out.println("Num2 es igual que num1");
-	   	 }else {
-	   		 if (num2<num1) {
-	   		 System.out.println("Num1 es mayor que num2");
-	   	 }
-	    }
-       }
-	  }
 }
-

@@ -4,14 +4,15 @@ public class Variable {
 
 	public static void main(String[] args) {
 		
-		int numero = 5;
+		int numero= 5;
 		
-		String nombre = "Daniel";
+		String nombre = "Alvaro";
 		
-		char letra = 'D';
+		char letra= 'A';
 		
-		double temperatura = 22.5; 
-		
+		double temperatura = 22.5;
+	
+
 	}
 
 }

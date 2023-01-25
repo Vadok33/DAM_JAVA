@@ -3,8 +3,18 @@ package bucleFor;
 public class EscribeAbecedario2 {
 
 	public static void main(String[] args) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Auto-generated method stub
 
-	}
+        char b;
+
+
+        for(b = 'a'; b <= 'z'; ++b)
+
+            System.out.print(b + " ");
+
+    }
+
 
 }
+
+
