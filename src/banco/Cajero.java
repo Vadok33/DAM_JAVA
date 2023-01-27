@@ -4,53 +4,66 @@ import java.util.Scanner;
 
 public class Cajero {
 
-	CuentaCorriente	cliente1 = new CuentaCorriente("123","Pepe", 0);
 	
 	public static void main(String[] args) {
 	
-
-	
-	System.out.println("*** Cajero JAVA 5ºD ***");
-	System.out.println("Desarrollado por Álvaro Baquedano");
-	
-	System.out.println("Opciones:");
-	System.out.println("----------");
-	System.out.println("1 - Sacar dinero");
-	System.out.println("2 - Ingresar dinero");
-	System.out.println("3 - Consultar Saldo");
-	System.out.println("4 - Salir");
-	
-	Scanner sc = new Scanner(System.in);
-	System.out.println("\nIntroduzca una opción:");
-	int opcion = 0;
-	
-	while (opcion != 4) {
+		//Crear objeto (miCuenta)
+		CuentaCorriente miCuenta = new CuentaCorriente("1234567k","Alvaro", "1500");
+				
+		//Estado inicial de miCuenta
 		
+		
+		
+		
+		
+		
+		// Opciones del cajero
+		
+		
+		
+		
+		
+		int opcion = 0;
+		
+	do {
+		System.out.println("\n*** Bienvenido a Farlok Bank *** \nIntroduzca una opción: \n---------- \n¿Que desea hacer? \n---------- \n1 - Sacar dinero \n2 - Ingresar dinero \n3 - Consultar Saldo \n4 - Salir");
+		Scanner sc = new Scanner(System.in);
 		opcion = sc.nextInt();
+		
+	
+	
 		
 	switch (opcion) {
 	
+	
+	//Sacar dinero
 	case 1:
-		retirar();
+		miCuenta.retirar(miCuenta);
 	break;
 	
+	//Ingresar dinero
 	case 2: 
-//		ingresar();
+		miCuenta.ingresar(miCuenta);
 	break;
 	
+	//consultar saldo
 	case 3:
-//		consultar();
+		miCuenta.consultar(miCuenta);
 	break;
 	
-	case 4: System.out.println("Has cerrado sesión");
+	//Salir
+	case 4:
+		miCuenta.salir();
 		
 	break;
 	
 	default:
-
-		System.out.println("\nIntroduzca una opción del 1 al 4");
-	
+		System.out.println("\nIntroduzca una opción");
+		
 	}
+	}
+		while (opcion !=4);
+	
 	
 	}
 	sc.close();
