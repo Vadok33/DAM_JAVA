@@ -8,7 +8,7 @@ public class Cajero {
 	public static void main(String[] args) {
 	
 		//Crear objeto (miCuenta)
-		CuentaCorriente miCuenta = new CuentaCorriente("1234567k","Alvaro", "1500");
+		CuentaCorriente miCuenta = new CuentaCorriente("1234567k","Alvaro", 1500.00);
 				
 		//Estado inicial de miCuenta
 		
@@ -17,16 +17,15 @@ public class Cajero {
 		
 		
 		
-		// Opciones del cajero
-		
+		// Opciones del cajero3
 		
 		
 		
 		
 		int opcion = 0;
-		
+		System.out.println("\n*** Bienvenido a Farlok Bank *** \nIntroduzca una opción:  \n---------- \n1 - Sacar dinero \n2 - Ingresar dinero \n3 - Consultar Saldo \n4 - Salir");
 	do {
-		System.out.println("\n*** Bienvenido a Farlok Bank *** \nIntroduzca una opción: \n---------- \n¿Que desea hacer? \n---------- \n1 - Sacar dinero \n2 - Ingresar dinero \n3 - Consultar Saldo \n4 - Salir");
+		System.out.println("\n¿Que desea hacer? ");
 		Scanner sc = new Scanner(System.in);
 		opcion = sc.nextInt();
 		
@@ -66,20 +65,7 @@ public class Cajero {
 	
 	
 	}
-	sc.close();
-}
-	public static  void retirar() {
-		Scanner sc = new Scanner(System.in);
-		cliente1.getsaldo;
-		if (cliente1.saldo > 0) {
-			double saldo = sc.nextDouble();
-			cliente1.saldo = cliente1.saldo - saldo;
-		}
-		else {
-			System.out.println("No tienes sufiente saldo");
-		}
-	sc.close();
-	}
+	
 
 	
 }
