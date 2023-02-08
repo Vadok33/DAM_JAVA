@@ -54,23 +54,25 @@ public void salir (){
 
 public void retirar(CuentaCorriente miCuenta) {
 	Scanner sc=new Scanner (System.in);
-	System.out.println("Tu saldo es: "+ miCuenta.saldo);
+	System.out.println("Tu saldo es: "+ miCuenta.saldo+"€");
 	System.out.println("¿Cuanto dinero desea sacar?");
 	double importe = sc.nextDouble();
 	if (importe <= 0){
 		System.out.println("El importe no puede ser negativo");	
 	}
 	if (importe >= miCuenta.saldo){
-		System.out.println("No tienes pasta puto tieso!!!!!xD");	
+		System.out.println("No dispones de saldo suficiente");	
 	}
 	
 	miCuenta.saldo -= importe;
-	System.out.println("");
+	System.out.println("Ha retirado "+importe+"€");
+	System.out.println("Su nuevo saldo es de: "+ miCuenta.saldo+"€");
+	System.out.println("\n¿Desea realizar otra operación? \n---------- \n1 - Sacar dinero \n2 - Ingresar dinero \n3 - Consultar Saldo \n4 - Salir");
 }
 
 public void ingresar(CuentaCorriente miCuenta) {
 	Scanner sc=new Scanner (System.in);
-	System.out.println("Tu saldo es: "+ miCuenta.saldo);
+	System.out.println("Tu saldo es: "+ miCuenta.saldo+"€");
 	System.out.println("¿Cuanto dinero desea ingresar?");
 	double importe = sc.nextDouble();
 	if (importe <= 0){
@@ -78,11 +80,13 @@ public void ingresar(CuentaCorriente miCuenta) {
 		}
 	
 	miCuenta.saldo += importe;
-	System.out.println("");
+	System.out.println("Su nuevo saldo es de: "+ miCuenta.saldo+"€");
+	System.out.println("\n¿Desea realizar otra operación? \n---------- \n1 - Sacar dinero \n2 - Ingresar dinero \n3 - Consultar Saldo \n4 - Salir");
 }
 
 public void consultar(CuentaCorriente miCuenta) {
-	System.out.println("Tu saldo es: "+ miCuenta.saldo);
+	System.out.println("Tu saldo es: \n"+ miCuenta.saldo+"€");
+	System.out.println("\n¿Desea realizar otra operación? \n---------- \n1 - Sacar dinero \n2 - Ingresar dinero \n3 - Consultar Saldo \n4 - Salir");
 }
 
 }

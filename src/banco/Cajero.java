@@ -7,27 +7,26 @@ public class Cajero {
 	
 	public static void main(String[] args) {
 	
-		//Crear objeto (miCuenta)
+	//Crear objeto (miCuenta)
 		CuentaCorriente miCuenta = new CuentaCorriente("1234567k","Alvaro", 1500.00);
 				
-		//Estado inicial de miCuenta
+	//Estado inicial de miCuenta
 		
 		
 		
 		
 		
 		
-		// Opciones del cajero3
+	// Opciones del cajero3
 		
 		
 		
 		
-		int opcion = 0;
-		System.out.println("\n*** Bienvenido a Farlok Bank *** \nIntroduzca una opción:  \n---------- \n1 - Sacar dinero \n2 - Ingresar dinero \n3 - Consultar Saldo \n4 - Salir");
+	int opcion = 0;
+	System.out.println("\n*** Bienvenido a Farlok Bank *** \n\n¿Que desea hacer?\n  \n---------- \n1 - Sacar dinero \n2 - Ingresar dinero \n3 - Consultar Saldo \n4 - Salir");
 	do {
-		System.out.println("\n¿Que desea hacer? ");
-		Scanner sc = new Scanner(System.in);
-		opcion = sc.nextInt();
+	Scanner sc = new Scanner(System.in);
+	opcion = sc.nextInt();
 		
 	
 	
@@ -57,7 +56,7 @@ public class Cajero {
 	break;
 	
 	default:
-		System.out.println("\nIntroduzca una opción");
+		System.out.println("\n¿Desea realizar otra operación?");
 		
 	}
 	}
