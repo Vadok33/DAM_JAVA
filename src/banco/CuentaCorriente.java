@@ -6,24 +6,29 @@ public class CuentaCorriente {
 	
 	// Atributos
 	
-	String dni;		// del titular
-	String nombre;	// del titular
+	String dni;		// dni del titular
+	String nombre;	// nombre del titular
 	double saldo;	// efectivo disponible en mi cuenta
+	double limite;	// limite para sacar
 	
 	//Metodos CONSTRUCTORES
 	
 public CuentaCorriente () {		
 }
-public CuentaCorriente(String dni, String nombre, double saldo) {
+public CuentaCorriente(String dni, String nombre, double saldo, double limite) {
 
 this.dni = dni;
 this.nombre = nombre;
 this.saldo = saldo;
+this.limite = limite;
 }
 
 //Métodos GETTERS & SETTERS
 public String getnombre() {
     return nombre;
+}
+public Double getlimite() {
+    return limite;
 }
 
 public double getsaldo() {
@@ -36,6 +41,9 @@ public String getdni() {
 
 public void setnombre(String nombre) {
     this.nombre = nombre;
+}
+public Double setlimite() {
+    return limite;
 }
 
 public void setsaldo(double saldo) {
@@ -54,39 +62,46 @@ public void salir (){
 
 public void retirar(CuentaCorriente miCuenta) {
 	Scanner sc=new Scanner (System.in);
-	System.out.println("Tu saldo es: "+ miCuenta.saldo+"€");
+	System.out.println("Su saldo es: "+ miCuenta.saldo+"€ y tiene un límite de :"+ miCuenta.limite+"€");
 	System.out.println("¿Cuanto dinero desea sacar?");
 	double importe = sc.nextDouble();
 	if (importe <= 0){
 		System.out.println("El importe no puede ser negativo");	
+		
 	}
-	if (importe >= miCuenta.saldo){
+	else if (importe > miCuenta.saldo){
 		System.out.println("No dispones de saldo suficiente");	
 	}
+	else if (importe > miCuenta.limite){
+			System.out.println("El importe supera el limite que puede sacar");	
+	}		
+	else {
 	
 	miCuenta.saldo -= importe;
 	System.out.println("Ha retirado "+importe+"€");
 	System.out.println("Su nuevo saldo es de: "+ miCuenta.saldo+"€");
-	System.out.println("\n¿Desea realizar otra operación? \n---------- \n1 - Sacar dinero \n2 - Ingresar dinero \n3 - Consultar Saldo \n4 - Salir");
+	System.out.println("\n¿Desea realizar otra operación?");
 }
-
+}
 public void ingresar(CuentaCorriente miCuenta) {
 	Scanner sc=new Scanner (System.in);
-	System.out.println("Tu saldo es: "+ miCuenta.saldo+"€");
+	System.out.println("Su saldo es: "+ miCuenta.saldo+"€");
 	System.out.println("¿Cuanto dinero desea ingresar?");
 	double importe = sc.nextDouble();
 	if (importe <= 0){
 		System.out.println("El importe no puede ser negativo");
 		}
+	else {
 	
 	miCuenta.saldo += importe;
 	System.out.println("Su nuevo saldo es de: "+ miCuenta.saldo+"€");
-	System.out.println("\n¿Desea realizar otra operación? \n---------- \n1 - Sacar dinero \n2 - Ingresar dinero \n3 - Consultar Saldo \n4 - Salir");
+	System.out.println("\n¿Desea realizar otra operación?");
 }
-
+}
 public void consultar(CuentaCorriente miCuenta) {
-	System.out.println("Tu saldo es: \n"+ miCuenta.saldo+"€");
-	System.out.println("\n¿Desea realizar otra operación? \n---------- \n1 - Sacar dinero \n2 - Ingresar dinero \n3 - Consultar Saldo \n4 - Salir");
+	System.out.println("Sr/Sra "+  miCuenta.nombre + " con DNI "+ miCuenta.dni);
+	System.out.println("Su saldo es: \n"+ miCuenta.saldo+"€ y tiene un límite de :"+ miCuenta.limite+"€");
+	System.out.println("\n¿Desea realizar otra operación?");
 }
 
 }
