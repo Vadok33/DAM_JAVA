@@ -6,7 +6,7 @@ public class OrdenarArrayBien {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-System.out.println("*** INICIO DEL PROGRAMA ***");
+System.out.println("*** INICIO ***");
         
         int numElementos;
         int menor=0;
@@ -55,7 +55,7 @@ System.out.println("*** INICIO DEL PROGRAMA ***");
         }
         entrada.close();
         System.out.println();
-        System.out.println("*** FIN DEL PROGRAMA ***");
+        System.out.println("*** FIN ***");
 	}
 
 }

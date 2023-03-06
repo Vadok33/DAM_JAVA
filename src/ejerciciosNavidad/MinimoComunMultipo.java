@@ -6,7 +6,7 @@ public class MinimoComunMultipo {
 	
 	public static void main(String[] args) {
 
-		System.out.println("INICIO DEL PROGRAMA MinimoComunMultiplo: desarrollado por Álvaro Baquedano");
+		System.out.println("INICIO");
 	    try (Scanner sc = new Scanner(System.in)) {
 			System.out.println("Introduce el primer número: ");
 			int num1 = sc.nextInt();
@@ -23,7 +23,7 @@ public class MinimoComunMultipo {
 			System.out.println("El MCM de " + num1 + " y " + num2 + " es " + mcm);
 		}
 	    
-	    System.out.println("\nFIN DEL PROGRAMA");
+	    System.out.println("\nFIN");
 }
 
 	  public static int calcularMCD(int a, int b) {

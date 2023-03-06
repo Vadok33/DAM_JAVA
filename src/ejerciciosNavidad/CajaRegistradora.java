@@ -7,7 +7,7 @@ public class CajaRegistradora {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		System.out.println("INICIO DEL PROGRAMA CajaRegistradora: \ndesarrollado por Álvaro Baquedano");
+		System.out.println("INICIO DEL PROGRAMA");
 		
 		 Scanner sc = new Scanner(System.in);
 
@@ -34,7 +34,7 @@ public class CajaRegistradora {
 		    
 		      System.out.println("\nEl cliente ha pagado exactamente lo que vale el producto.");
 		    }
-		System.out.println("\nFIN DEL PROGRAMA");
+		System.out.println("\nFIN ");
 	}
 
 }

@@ -6,7 +6,7 @@ public class MaximoComunDivisor {
 
 	public static void main(String[] args) {
 
-			System.out.println("INICIO DEL PROGRAMA MaximoComunDivisor: desarrollado por Álvaro Baquedano");
+			System.out.println("INICIO");
 		    try (Scanner sc = new Scanner(System.in)) {
 				System.out.println("Introduce el primer número: ");
 				int num1 = sc.nextInt();
@@ -19,7 +19,7 @@ public class MaximoComunDivisor {
    				System.out.println("El MCD de " + num1 + " y " + num2 + " es " + mcd);
 			}
 		    
-		    System.out.println("\nFIN DEL PROGRAMA");
+		    System.out.println("\nFIN");
 	}
 	
 		  public static int calcularMCD(int a, int b) {
